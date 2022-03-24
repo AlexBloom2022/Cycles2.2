@@ -1,0 +1,13 @@
+# name ,amount, registered, expected
+'registered, bonus 30', 1000, true, 30
+'registered, bonus upper limit', 1000000, true, 500
+'unregistered, bonus 10', 1000, false, 10
+'unregistered, bonus upper limit', 1000000, false, 500
+'registered, bonus bottom limit', 30, true, 0
+'registered, bonus over bottom limit', 34, true, 1
+'registered, bonus under upper limit', 16634, true, 499
+'registered, bonus middle range', 8334, true, 250
+'unregistered, bonus middle limit range', 25000, false, 250
+'unregistered, bonus under upper limit', 49900, false, 499
+'unregistered, bonus bottom limit', 90, false, 0
+'unregistered, bonus over bottom limit', 100, false, 1
